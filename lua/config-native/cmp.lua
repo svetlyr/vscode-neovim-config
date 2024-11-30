@@ -39,6 +39,8 @@ return {
       local luasnip = require("luasnip")
       luasnip.config.setup({})
 
+      ---@type cmp.Setup
+      ---@diagnostic disable-next-line: redundant-parameter
       cmp.setup({
         snippet = {
           expand = function(args) luasnip.lsp_expand(args.body) end,

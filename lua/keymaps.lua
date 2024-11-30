@@ -1,5 +1,3 @@
--- TODO: keybinds for pasting from yank register and system clipboard
-
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -28,14 +26,10 @@ else
   keymap("i", "jk", "<Esc>", opts)
   keymap("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
-  -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
-  -- or just use <C-\><C-n> to exit terminal mode
-  keymap("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-
-  keymap("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-  keymap("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-  keymap("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-  keymap("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+  keymap("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
+  keymap("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
+  keymap("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
+  keymap("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
   keymap("n", "<S-l>", ":bnext<CR>", opts)
   keymap("n", "<S-h>", ":bprevious<CR>", opts)

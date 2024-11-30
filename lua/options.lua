@@ -37,6 +37,8 @@ if vim.g.vscode then
 
   opt.number = false
   opt.relativenumber = false
+
+  opt.updatetime = 1000
 else
   opt.wrap = true
 

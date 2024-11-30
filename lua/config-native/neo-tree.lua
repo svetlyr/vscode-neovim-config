@@ -28,7 +28,6 @@ return {
       mappings = {
         ["l"] = "open",
         ["h"] = "close_node",
-        -- ["<leader>e"] = "close_window",
       },
     },
   },

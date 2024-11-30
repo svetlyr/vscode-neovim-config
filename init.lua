@@ -8,4 +8,4 @@ require("keymaps")
 require("lazy-bootstrap")
 
 -- [[ Configure and install plugins ]]
-require("lazy-plugins")
+require("lazy-init")
