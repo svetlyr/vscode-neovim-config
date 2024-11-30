@@ -67,4 +67,12 @@ else
   opt.cursorline = true
 
   opt.scrolloff = 10
+
+  -- * Fix split delimiter color
+  vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*", -- Matches all color schemes
+    desc = "Set custom highlights for WinSeparator",
+    group = vim.api.nvim_create_augroup("ColorSchemeOverrides", { clear = true }),
+    callback = function() vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#2E303E", bg = nil }) end,
+  })
 end

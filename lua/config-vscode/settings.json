@@ -140,10 +140,13 @@
     "textMateRules": []
   },
   "editor.wordWrap": "on",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.fontSize": 14.5,
   // ** UI
+  "window.zoomLevel": 0.2,
+  "workbench.sideBar.location": "right",
   "breadcrumbs.symbolPath": "off",
   "breadcrumbs.symbolSortOrder": "name",
-  "window.zoomLevel": 0.2,
   // * Font
   "debug.console.fontFamily": "Hack Nerd Font Mono",
   "editor.codeLensFontFamily": "Hack Nerd Font",
@@ -1249,18 +1252,16 @@
       "title": "Highlight symbol transient"
     }
   },
+  // * -- End WhichKey
   // * Miscellaneous
   "update.mode": "manual",
-  "editor.fontSize": 14.5,
   "dotenv.enableAutocloaking": false,
   "gitlens.codeLens.scopes": [
     "document",
     "containers"
   ],
   "quick-lint-js.snarky": true,
-  "editor.semanticHighlighting.enabled": true,
   "settingsSync.keybindingsPerPlatform": false,
-  "workbench.sideBar.location": "right",
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.enableImages": true,
+  "terminal.integrated.enableImages": true
 }
