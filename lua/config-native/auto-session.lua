@@ -6,6 +6,6 @@ return {
   ---@type AutoSession.Config
   opts = {
     suppressed_dirs = { "~/", "/" },
-    auto_restore_last_session = vim.uv.cwd() == vim.uv.os_homedir(),
+    auto_restore_last_session = vim.uv.cwd() == vim.uv.os_homedir() and vim.fn.argc() == 0,
   },
 }
