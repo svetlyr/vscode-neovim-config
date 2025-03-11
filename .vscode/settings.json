@@ -3,5 +3,11 @@
         "theme",
         "flash"
     ],
-    "stylua.targetReleaseVersion": "latest"
+    "stylua.targetReleaseVersion": "latest",
+    "Lua.diagnostics.libraryFiles": "Enable",
+    "Lua.runtime.path": [
+        "?.lua",
+        "?/init.lua",
+        "$HOME/.vscode/extensions/asvetliakov.vscode-neovim-*.**.**/runtime"
+    ]
 }

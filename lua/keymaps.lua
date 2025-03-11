@@ -10,6 +10,9 @@ keymap("n", "<Esc>", "<cmd>nohlsearch<CR>")
 keymap("n", "oo", "m`o<Esc>``", opts)
 keymap("n", "OO", "m`O<Esc>``", opts)
 
+-- TODO: fix vscode cursor postition to the start of selection
+keymap("v", "ygc", function() vim.api.nvim_feedkeys("y" .. "gv" .. "gc", "x", false) end, opts)
+
 if vim.g.vscode then
   local code = require("vscode")
 
