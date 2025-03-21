@@ -39,6 +39,12 @@ if vim.g.vscode then
   opt.relativenumber = false
 
   opt.updatetime = 1000
+
+  -- NOTE: Potential fix for ghost text
+  vim.api.nvim_create_autocmd("CursorHold", {
+    pattern = "*",
+    command = "silent! mode",
+  })
 else
   opt.wrap = true
 
