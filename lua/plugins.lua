@@ -1,5 +1,18 @@
 return {
-  { "echasnovski/mini.surround", opts = {} },
+  {
+    "echasnovski/mini.surround",
+    version = "*",
+    config = function()
+      require("mini.surround").setup({
+        custom_surroundings = {
+          T = {
+            input = function() return { "{`", "`}" } end,
+            output = { left = "{`", right = "`}" },
+          },
+        },
+      })
+    end,
+  },
   { "xiyaowong/fast-cursor-move.nvim", config = function() end },
   {
     "akinsho/horizon.nvim",

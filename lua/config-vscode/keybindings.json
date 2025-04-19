@@ -1,4 +1,5 @@
-[ // TODO: organize this
+[
+  // TODO: organize this
   {
     "key": "ctrl+l",
     "command": "-expandLineSelection",
@@ -224,5 +225,9 @@
     "key": "ctrl+h",
     "command": "-whichkey.searchBindings",
     "when": "whichkeyVisible"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.zoomOut"
   }
 ]

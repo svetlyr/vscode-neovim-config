@@ -20,20 +20,11 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.trustedDomains.promptInTrustedWorkspace": true,
   // * Lua
+  "Lua.diagnostics.globals": ["vim"],
   "Lua.runtime.version": "LuaJIT",
-  "Lua.type.inferParamType": true,
-  "Lua.type.checkTableShape": true,
-  "Lua.diagnostics.libraryFiles": "Enable",
-  "Lua.diagnostics.globals": [
-    "vim"
-  ],
-  "Lua.workspace.library": [
-    "$HOME/.local/share/nvim/lazy/"
-  ],
-  "stylua.searchBinaryInPATH": true,
   // * Formatter
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -51,7 +42,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -72,6 +63,9 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   // ** Extension Settigns
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
   "less.format.spaceAroundSelectorSeparator": true,
   "markdown.preview.breaks": true,
   "npm-intellisense.packageSubfoldersIntellisense": true,
@@ -83,22 +77,11 @@
   "auto-close-tag.enableAutoCloseTag": false,
   // * Conventional Commits
   "conventionalCommits.showNewVersionNotes": false,
-  // * ESLint
-  "eslint.useESLintClass": true,
   // * VSCode Neovim
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "vscode-neovim.compositeKeys": {
-    "jk": {
-      "command": "vscode-neovim.escape"
-    }
-  },
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/local/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/svetly/.config/nvim/init.lua",
   "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/svetly/.config/nvim/init.lua",
   "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\svetly\\AppData\\Local\\nvim\\init.lua",
   // ** -- End Extension Settings
   // ** Editor
@@ -107,14 +90,12 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingOvertype": "always",
   "editor.autoClosingQuotes": "always",
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorBlinking": "solid",
-  "editor.cursorStyle": "underline",
   "editor.cursorSurroundingLines": 10,
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
@@ -140,11 +121,7 @@
     "textMateRules": []
   },
   "editor.wordWrap": "on",
-  "editor.semanticHighlighting.enabled": true,
-  "editor.fontSize": 14.5,
   // ** UI
-  "window.zoomLevel": 0.2,
-  "workbench.sideBar.location": "right",
   "breadcrumbs.symbolPath": "off",
   "breadcrumbs.symbolSortOrder": "name",
   // * Font
@@ -190,11 +167,13 @@
   "git.confirmSync": false,
   "git.fetchOnPull": true,
   "git.suggestSmartCommit": false,
-  // * Git Lens
-  "gitlens.currentLine.enabled": false,
   "gitlens.defaultGravatarsStyle": "mp",
   "gitlens.plusFeatures.enabled": false,
   "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.codeLens.scopes": ["document", "containers"],
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
   // ** -- End Git
   // * HTML
   "html.format.indentHandlebars": true,
@@ -1252,16 +1231,35 @@
       "title": "Highlight symbol transient"
     }
   },
-  // * -- End WhichKey
   // * Miscellaneous
   "update.mode": "manual",
+  "editor.fontSize": 14.5,
   "dotenv.enableAutocloaking": false,
-  "gitlens.codeLens.scopes": [
-    "document",
-    "containers"
-  ],
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape"
+    }
+  },
   "quick-lint-js.snarky": true,
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+  "editor.semanticHighlighting.enabled": true,
   "settingsSync.keybindingsPerPlatform": false,
+  "Lua.type.checkTableShape": true,
+  "Lua.type.inferParamType": true,
   "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.enableImages": true
+  "terminal.integrated.enableImages": true,
+  "Lua.diagnostics.libraryFiles": "Enable",
+  "Lua.workspace.library": ["$HOME/.local/share/nvim/lazy/"],
+  "stylua.searchBinaryInPATH": true,
+  "files.insertFinalNewline": true,
+  "eslint.useFlatConfig": true,
+  "eslint.useESLintClass": true,
+  "astro.updateImportsOnFileMove.enabled": true,
+  "workbench.sideBar.location": "right",
+  "chat.commandCenter.enabled": false,
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "window.zoomLevel": 0.15,
+  "workbench.activityBar.location": "hidden"
 }
