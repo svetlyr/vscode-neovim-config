@@ -11,6 +11,9 @@ vim.g.have_nerd_font = true
 
 vim.g.fast_cursor_move_acceleration = false
 
+opt.smartcase = true
+opt.ignorecase = true
+
 opt.showmode = false
 
 opt.timeoutlen = 300
@@ -56,9 +59,6 @@ else
   opt.breakindent = true
 
   opt.undofile = true
-
-  opt.smartcase = true
-  opt.ignorecase = true
 
   opt.updatetime = 250
 
